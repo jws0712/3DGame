@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CamMove : MonoBehaviour
 {
-    public float senX;
-    public float senY;
+    public float mouseSen;
+
+    private float senX;
+    private float senY;
 
     public Transform Player;
 
@@ -16,6 +18,9 @@ public class CamMove : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        senX = mouseSen;
+        senY = mouseSen;
     }
 
     // Update is called once per frame
