@@ -28,7 +28,7 @@ public class Player_RT : MonoBehaviour
         //}
         //if (Input.GetKey(KeyCode.LeftArrow) == true)
         //{
-        //    rb.AddForce(-speed ,0f, 0f);
+        //    rb.AddForce(-speed ,0f, 0f);   
         //}
         
         float xInput = Input.GetAxis("Horizontal");
