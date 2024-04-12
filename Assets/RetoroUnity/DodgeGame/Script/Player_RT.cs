@@ -46,5 +46,9 @@ public class Player_RT : MonoBehaviour
     public void Die()
     {
         gameObject.SetActive(false);
+
+        GameManager_RT gameManager_RT = FindObjectOfType<GameManager_RT>();
+
+        gameManager_RT.EndGame();
     }
 }
