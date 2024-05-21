@@ -13,8 +13,8 @@ public class CameraContoller_Dr_Go : MonoBehaviour
 
     public void RotateTo(float mouseX, float mouseY)
     {
-        eulerAngleY -= mouseX * rotateSpeedX;
-        eulerAngleX += mouseY * rotateSpeedY;
+        eulerAngleX -= mouseY * rotateSpeedY;
+        eulerAngleY += mouseX * rotateSpeedX;
 
         eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
 

@@ -11,6 +11,8 @@ public class PlayerMovement_Dr_Go : MonoBehaviour
     public const float gravity = -9.81f;
     private Vector3 moveDir = Vector3.zero;
 
+    [SerializeField]
+    private Transform cameraTransform = null;
     private CharacterController characterController = null;
 
     private void Awake()
@@ -31,8 +33,8 @@ public class PlayerMovement_Dr_Go : MonoBehaviour
 
     public void MoveTo(Vector3 dir)
     {
-        
-        moveDir = new Vector3(dir.x, moveDir.y, dir.z);
+        Vector3 movedis = cameraTransform.rotation * dir;
+        moveDir = new Vector3(movedis.x, moveDir.y, movedis.z);
     }
 
     public void JumpTo()
